@@ -1,4 +1,5 @@
 import './App.css';
+import Avatar from './components/Avatar';
 import Profile from './components/Profile';
 
 /**
@@ -8,14 +9,22 @@ import Profile from './components/Profile';
  */
 
 function AppProfile() {
-  const name = "Noh"
-  const array = ["Noh", "back", "Jeon"]
+  const handleClick = (event) => {
+    console.log(event);
+    alert("Button Click");
+  }
   return (
     <>
+      <button onClick={handleClick} >Button</button>
+      <Avatar image={"/image/profile.jpg"}
+        isNew={true}
+      />
       <Profile 
-      image={"/image/profile.jpg"}
-      name="Sion Noh"
-      title="Front-End Developer" />
+        image={"/image/profile.jpg"}
+        name="Sion Noh"
+        title="Front-End Developer"
+        isNew={true} 
+      />
     </>
   );
 }
