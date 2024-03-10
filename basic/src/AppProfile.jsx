@@ -12,7 +12,10 @@ function AppProfile() {
   const array = ["Noh", "back", "Jeon"]
   return (
     <>
-      <Profile />
+      <Profile 
+      image={"/image/profile.jpg"}
+      name="Sion Noh"
+      title="Front-End Developer" />
     </>
   );
 }

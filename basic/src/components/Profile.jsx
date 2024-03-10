@@ -1,10 +1,10 @@
 import React from "react";
-export default function Profile() {
+export default function Profile(props) {
     return (
       <div className="profile">
-        <img className="photo" src="/image/profile.jpg"></img>
-        <h1>Sion Noh</h1>
-        <p>Front-End Developer</p>
+        <img className="photo" src={props.image}></img>
+        <h1>{props.name}</h1>
+        <p>{props.title}</p>
       </div>
     );
 }
