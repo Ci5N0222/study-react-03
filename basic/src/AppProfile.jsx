@@ -1,4 +1,5 @@
 import './App.css';
+import Profile from './components/Profile';
 
 /**
  * 중요
@@ -10,13 +11,9 @@ function AppProfile() {
   const name = "Noh"
   const array = ["Noh", "back", "Jeon"]
   return (
-    <div className="App">
-      <h1 className='orange'>Hello!</h1>
-      <h2>I'm { name }</h2>
-      {
-        array.map(item => <div>{item}</div>)
-      }
-    </div>
+    <>
+      <Profile />
+    </>
   );
 }
 
