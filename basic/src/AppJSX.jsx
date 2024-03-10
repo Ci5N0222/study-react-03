@@ -6,14 +6,18 @@ import './App.css';
  * 2. 변수 사용 법 : { 변수 }
  */
 
-function App() {
+function AppJSX() {
   const name = "Noh"
+  const array = ["Noh", "back", "Jeon"]
   return (
     <div className="App">
       <h1 className='orange'>Hello!</h1>
       <h2>I'm { name }</h2>
+      {
+        array.map(item => <div>{item}</div>)
+      }
     </div>
   );
 }
 
-export default App;
+export default AppJSX;
