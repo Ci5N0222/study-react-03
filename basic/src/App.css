@@ -41,3 +41,37 @@
   text-transform: uppercase;
   font-weight: bold;
 }
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.counter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  border: 2px solid red;
+}
+
+.count:hover {
+  background-color: #eee;
+}
+
+.number {
+  font-size: 7rem;
+}
+
+.button {
+  font-size: 2rem;
+  padding: 0.2rem 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  background: orange;
+  background: linear-gradient(
+
+  );
+}
