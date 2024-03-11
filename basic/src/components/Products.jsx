@@ -1,9 +1,21 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 export default function Products() {
 
     const [count, setCount] = useState(0);
     const [products, setProducts] = useState([]);
+
+    useEffect(()=>{
+        fetch('data/products.json')
+        .then(res => res.json())
+        .then(data=>{
+            console.log("데이터를 받아옴");
+            setProducts(data);
+        });
+        return ()=>{
+            console.log('')
+        }
+    }, []);
 
     return (
         <>
