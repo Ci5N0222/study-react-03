@@ -2,23 +2,28 @@ import React, { useEffect, useState } from 'react';
 
 export default function Products() {
 
-    const [count, setCount] = useState(0);
     const [products, setProducts] = useState([]);
+    const [checked, setChecked] = useState(false);
+    const handleChange = () => {
+        setChecked((prev) => !prev);
+    }
 
     useEffect(()=>{
-        fetch('data/products.json')
+        fetch(`data/${checked ? 'sale_':''}products.json`)
         .then(res => res.json())
         .then(data=>{
-            console.log("데이터를 받아옴");
+            console.log("네트워크에서 데이터를 받아옴");
             setProducts(data);
         });
         return ()=>{
-            console.log('')
+            console.log('깨끗하게 청소하는 일을 합니다.')
         }
-    }, []);
+    }, [checked]);
 
     return (
         <>
+            <input type='checkbox' id="checkbox" value={checked} onChange={handleChange}></input>
+            <lable htmlFor='checkbox'>Show only Hot sale</lable>
             <ul>
                 {
                     products.map((item)=>{
@@ -33,9 +38,7 @@ export default function Products() {
                     })
                 }
             </ul>
-            <button onClick={()=>{
-                setCount((prev)=>prev+1)
-            }}>{count}</button>
+
         </>
     )
 }
