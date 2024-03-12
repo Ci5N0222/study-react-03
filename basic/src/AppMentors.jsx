@@ -50,6 +50,26 @@ export default function AppMentors() {
                 setPerson(copy);
 
             }}>멘토의 이름 바꾸기</button>
+
+            <button onClick={()=>{
+                const name = prompt(`tkwp 이름을 입력해주세요.`);
+                const title = prompt(`추가할 타이틀을 입력해주세요.`);
+                setPerson((person)=>({
+                    ...person,
+                    mentors: [...person.mentors, {name, title}]
+                }))
+                // let copy = {...person};
+                // copy.mentors.push({name, title});
+                // setPerson(copy);
+            }}>멘토 추가하기</button>
+
+            <button onClick={()=>{
+                const name = prompt(`삭제할 이름을 입력해주세요.`);
+                setPerson((person)=>({
+                    ...person,
+                    mentors: person.mentors.filter((m)=> m.name !== name)
+                }))
+            }}>멘토 삭제하기</button>
         </div>
     );
 }
