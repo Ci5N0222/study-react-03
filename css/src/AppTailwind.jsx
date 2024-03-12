@@ -2,6 +2,9 @@ import './App.css';
 
 /**
  * Tailwind
+ * - utility css
+ * - https://tailwindcss.com/
+ * 
  * 1. dev install (terminal)
  *  - 'yarn add -D tailwindcss'
  *  - `npx tailwindcss init`
