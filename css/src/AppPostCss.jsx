@@ -2,7 +2,11 @@ import './App.css';
 import Button1 from './components/Button1';
 import Button2 from './components/Button2';
 
-function App() {
+/**
+ * PostCSS
+ */
+
+export default function AppPostCss() {
   return (
     <>
       <Button1 />
@@ -11,4 +15,4 @@ function App() {
   );
 }
 
-export default App;
+
