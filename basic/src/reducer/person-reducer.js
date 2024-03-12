@@ -1,6 +1,6 @@
 export default function personReducer(person, action) {
     switch (action.type) {
-        case 'update': {
+        case 'updated': {
             const { prev, current } = action;
             return {
                 ...person,
