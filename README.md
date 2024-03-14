@@ -1,11 +1,14 @@
-# react-study-03
+## react-study-03
 
-# install
-## VSCode
-## Node.js
-## yarn
-### `npm install -g yarn`
+### install
+- VSCode
+- Node.js
+- yarn
 
-# Start
-## Create project
-### `yarn create react-app project-name`
+``` bash
+yarn install:
+$ npm install -g yarn
+
+create react project
+$ yarn create react-app 'project-name'
+```
