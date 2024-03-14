@@ -1,10 +1,13 @@
-# lib
-## Immer
-### `yarn add immer use-immer`
+## libray
+Immer
+```bash
+install:
+$ yarn add immer use-immer
+```
 
-# Extension
 
-## auto import
+## Extension
 
-## Simple React Snippets
-### 기본 템플릿을 축약어로 사용
+auto import
+
+Simple React Snippets
