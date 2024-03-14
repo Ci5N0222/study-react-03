@@ -3,12 +3,17 @@ import './App.css';
 import Home from './page/Home';
 import NotFound from './page/NotFound';
 import Videos from './page/Videos';
+import Root from './page/Root';
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <Home />,
-    errorElement: <NotFound />
+    element: <Root />,
+    errorElement: <NotFound />,
+    children: [
+      {index: true, element: <Home />},
+      {path: 'videos', element: <Videos />}
+    ]
   },
   {
     path: '/videos',
