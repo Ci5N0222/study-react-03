@@ -6,11 +6,12 @@ export default function Products() {
     const {isLoading, error, data: products} = useQuery({
         queryKey: ['products', checked],
         queryFn: async () => {
-            console.log('fetching...');
+            console.log(`fetching... ${checked}`);
             const response = await fetch(`data/${checked?'sale_':''}products.json`);
             return response.json();
         }, 
-        staleTime: 5000
+        // 5분간 stale 데이터 사용
+        staleTime: 1000 * 60 *5
     }
 )
 
