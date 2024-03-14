@@ -9,8 +9,10 @@ export default function Products() {
             console.log('fetching...');
             const response = await fetch(`data/${checked?'sale_':''}products.json`);
             return response.json();
-        }
-    })
+        }, 
+        staleTime: 5000
+    }
+)
 
     const handleChange = () => setChecked((checked) => !checked);
 
@@ -22,7 +24,7 @@ export default function Products() {
         <>
             <label>
                 <input type='checkbox' checked={checked} onChange={handleChange} />
-                Show Only 🔥 Sale
+                Show Only Sale
             </label>
             <ul>
                 {products.map((product) => (
